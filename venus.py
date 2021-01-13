@@ -142,6 +142,10 @@ if __name__ == "__main__":
 
           elif 'how\'s you doing'  in query:
                 speak('Just doing my thing')
+                
+          elif 'Good job'  in query:
+                speak('Thank you')
+
 
         #   elif 'current weather in' in command:
         #         reg_ex = re.search('current weather in (.*)', command)
