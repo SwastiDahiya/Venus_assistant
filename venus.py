@@ -7,7 +7,6 @@ import webbrowser
 import os
 import smtplib
 import re
-# from weather import Weather
 
 # sapi5 api h
 engine = pyttsx3.init('sapi5')
@@ -37,7 +36,7 @@ def wishMe():
 
 def takeCommand():
         # It takes microphone input from the user and returns string output
-        #yeh sb speech regonition module se aaya h
+        # yeh sb speech regonition module se aaya h
      r=sr.Recognizer()
      with sr.Microphone() as source:
         print("Listening.......")
@@ -146,21 +145,11 @@ if __name__ == "__main__":
           elif 'Good job'  in query:
                 speak('Thank you')
 
-
-        #   elif 'current weather in' in command:
-        #         reg_ex = re.search('current weather in (.*)', command)
-        #         if reg_ex:
-        #             city = reg_ex.group(1)
-        #             weather = Weather()
-        #             location = weather.lookup_by_location(city)
-        #             condition = location.condition()
-        #             talkToMe('The Current weather in %s is %s The tempeture is %.1f degree' % (city, condition.text(), (int(condition.temp())-32)/1.8))
-
           elif 'send email to me' in query:
               try:
                   speak('What should I say?')
                   content=takeCommand()
-                  to="swastidahiya18@gmail.com"
+                  to="abc@gmail.com"    # your email id
                   sendEmail(to,content)
                   speak("Email has been sent!")
               except Exception as e:
